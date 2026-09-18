@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Durgamadhaba Sahoo — Portfolio</title>
+<meta name="description" content="UI/UX &amp; visual design portfolio of Durgamadhaba Sahoo — product designer crafting simple, thoughtful interfaces." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700;800&family=Sedgwick+Ave+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>#loader{--loader-color:#FFD68C;}</style>
+<noscript><style>#loader{display:none}</style></noscript>
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <!-- Fourteen red strips — each scaleY(0)s upward with staggered delay,
+       creating a fine-grained staircase cascade (matches the reference:
+       ~100px-thick strips at 1920px width ≈ this density) -->
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="loader-grid" aria-hidden="true"></div>
+  <div class="loader-content">
+    <div class="loader-runner">
+      <canvas id="loaderRunnerCanvas"></canvas>
+    </div>
+    <div class="loader-track"><div class="fill"></div></div>
+    <span class="loader-label">Entering the dojo</span>
+  </div>
+</div>
+
+<div class="scroll-progress"></div>
+
+<!-- FIX #1 — pill-nav: .pill-nav-inner is now a <div> (no nested anchor).
+     Avatar + name are wrapped in their own <a href="#home"> (.pill-home-link)
+     so clicking them still navigates home. .pill-links is a sibling. -->
+<nav class="pill-nav" id="pillNav">
+  <div class="pill-nav-inner">
+    <a href="#home" class="pill-home-link">
+      <img src="assets/profile/avatar-sm.webp" alt="Durgamadhaba Sahoo" class="pill-avatar">
+      <span class="pill-name">DURGA</span>
+    </a>
+    <span class="pill-dots" aria-hidden="true">•••</span>
+    <span class="pill-links">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="resume.html">Resume</a><!-- FIX #11 — points to resume.html -->
+    </span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============================ HERO (interactive, cursor-tracking character) ============================ -->
+  <section id="home" class="hero hero-interactive">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+
+    <div class="hero-char-stage">
+      <canvas id="heroCharCanvas"></canvas>
+    </div>
+
+    <div class="hero-name-block">
+      <div class="hero-greet">👋 <span class="hi-cycle" id="hiCycle">Hi</span>, I'm Durga</div>
+      <div class="hero-wordmark">
+        <div class="hero-wordmark-line1">Product</div>
+        <div class="hero-wordmark-line2">Designer</div>
+      </div>
+    </div>
+
+    <div class="hero-progress">
+      <span>Scroll</span>
+      <div class="bar"><i></i></div>
+    </div>
+  </section>
+
+  <div class="slash-divider"><svg viewBox="0 0 400 2"><path d="M0 1 L400 1"/></svg></div>
+
+  <!-- ============================ PROJECTS ============================ -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Selected Work</span>
+          <!-- FIX #5 — h2 text changed -->
+          <h2 class="section-title">Check out some<br>of my work.</h2>
+        </div>
+        <p class="section-note">Product dashboards and a brand-identity
+          project — each opens into its own full case study.</p>
+      </div>
+    </div>
+
+    <div class="project-grid">
+
+      <a class="project-card reveal" href="accuknox.html">
+        <div class="project-card-top">
+          <span class="kanji-num">壱 / 04</span>
+          <span class="eyebrow">Case&nbsp;Study</span>
+        </div>
+        <div>
+          <div class="project-card-visual has-img"><img src="assets/accuknox/1-hero.webp" alt="AccuKnox dashboard cover" loading="lazy"></div>
+          <h3 class="project-card-title">AccuKnox</h3>
+          <p class="project-card-desc">Asset security dashboard for a cybersecurity
+            platform — findings, severity and asset triage for IT analysts.</p>
+          <div class="project-card-tags"><span>Dashboard</span><span>UX</span></div>
+        </div>
+        <span class="project-card-arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+        </span>
+      </a>
+
+      <a class="project-card reveal" href="zurie.html">
+        <div class="project-card-top">
+          <span class="kanji-num">弐 / 04</span>
+          <span class="eyebrow">Case&nbsp;Study</span>
+        </div>
+        <div>
+          <div class="project-card-visual has-img"><img src="assets/zurie/hero-mockup.webp" alt="Zurie dashboard cover" loading="lazy"></div>
+          <h3 class="project-card-title">Zurie</h3>
+          <p class="project-card-desc">Wind-farm site-intelligence dashboard —
+            evaluating sites on wind potential, terrain and grid proximity.</p>
+          <div class="project-card-tags"><span>Dashboard</span><span>Data&nbsp;Viz</span></div>
+        </div>
+        <span class="project-card-arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+        </span>
+      </a>
+
+      <a class="project-card reveal" href="pmgx.html">
+        <div class="project-card-top">
+          <span class="kanji-num">参 / 04</span>
+          <span class="eyebrow">Case&nbsp;Study</span>
+        </div>
+        <div>
+          <div class="project-card-visual has-img"><img src="assets/pmgx/pmgx-01-hero.webp" alt="PMGX workspace cover" loading="lazy"></div>
+          <h3 class="project-card-title">PMGX</h3>
+          <p class="project-card-desc">A unified employee workspace — tasks,
+            announcements, learning and team spaces in one interface.</p>
+          <div class="project-card-tags"><span>SaaS</span><span>UX</span></div>
+        </div>
+        <span class="project-card-arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H9M17 7v8"/></svg>
+        </span>
+      </a>
+
+      <div class="project-card locked reveal" aria-disabled="true">
+        <div class="project-card-top">
+          <span class="kanji-num">四 / 04</span>
+          <span class="eyebrow">Brand&nbsp;Identity</span>
+        </div>
+        <div>
+          <div class="project-card-visual has-img locked-visual">
+            <img src="assets/cowboy/cover.webp" alt="Cowboy Branding cover" loading="lazy">
+            <span class="locked-visual-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="1.5"/><path d="M7.5 10.5V7a4.5 4.5 0 0 1 9 0v3.5"/></svg>
+            </span>
+          </div>
+          <h3 class="project-card-title">Cowboy&nbsp;Branding</h3>
+          <p class="project-card-desc">A cowboy-themed personal brand system —
+            featuring the Medini handloom saree identity as a sub-project.</p>
+          <div class="project-card-tags"><span class="tag-progress">In Progress</span><span>Branding</span></div>
+        </div>
+        <span class="project-card-lock-badge" aria-hidden="true">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="1.5"/><path d="M7.5 10.5V7a4.5 4.5 0 0 1 9 0v3.5"/></svg>
+          Locked
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================ ABOUT ME — storytelling ============================ -->
+  <!-- FIX #6a — new 6-paragraph story copy; no reveal class on container (fly-in handles it) -->
+  <section id="about" class="about-me">
+    <div class="about-me-grid">
+      <div class="about-me-text">
+        <span class="eyebrow about-me-kicker">About Me</span>
+        <!-- Fix #2: exact text from brief — italic questions, accent on "feels right" -->
+        <div class="about-me-story" id="aboutStory">
+          <p>I think my curiosity for design started long before I actually knew what design was. As a kid, I was drawn to movie posters, game graphics, animations, and all the little visual details people often overlook. I didn't just wonder how they looked — I wondered, <em>"How did they make this?"</em> and <em>"Why does this feel this way?"</em> That curiosity pushed me to experiment, learn, and keep creating. Over time, I realised design isn't just about making things look good; it's about understanding why something <span class="story-accent">feels right</span>.</p>
+        </div>
+      </div>
+      <div class="polaroid reveal">
+        <span class="polaroid-tape"></span>
+        <div class="polaroid-frame">
+          <img src="assets/photos/photo-1.webp" alt="A personal photo" id="polaroidImg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIX #6d — katana divider REMOVED -->
+  <!-- FIX #6e — thin horizontal rule replaces katana image -->
+  <div class="section-thin-divider" aria-hidden="true"></div>
+
+  <!-- ============================ WHAT I DO — scroll word-reveal ============================ -->
+  <section class="word-reveal" id="word-reveal">
+    <div class="word-reveal-stage">
+      <div class="word-reveal-layout">
+        <div class="word-reveal-bar"><i></i></div>
+        <div>
+          <span class="eyebrow word-reveal-kicker">What I Do</span>
+          <!-- FIX #8 — new heading text; word-wrapping JS re-runs automatically on new count -->
+          <!-- Fix #8: "simple" wrapped in brush-accent-html for the word-reveal JS to pick up -->
+          <h2 class="word-reveal-heading" id="wordRevealHeading">I take messy ideas, find what really matters, and turn them into products that feel <span class="brush-accent-html">simple,</span> thoughtful, and easy to understand.</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ QUANTIFYING IMPACT ============================ -->
+  <section class="impact">
+    <div class="wrap wrap--full">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Quantifying Impact</span>
+          <h2 class="section-title">Numbers behind<br>the process.</h2>
+        </div>
+      </div>
+      <!-- FIX #9 — border-radius added via CSS -->
+      <div class="impact-grid">
+        <div class="impact-card reveal">
+          <div class="impact-num" data-count="35" data-suffix="%">0%</div>
+          <div class="impact-label">Faster task completion</div>
+          <div class="impact-desc">Redesigned OSRTC's bus-booking flow from 5 steps down to 3.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-num" data-count="1000" data-suffix="+">0+</div>
+          <div class="impact-label">Users impacted</div>
+          <div class="impact-desc">In-game UI components shipped for "Sena" at Gaurav Go Games.</div>
+        </div>
+        <div class="impact-card reveal">
+          <div class="impact-num" data-count="30" data-suffix="%">0%</div>
+          <div class="impact-label">Faster design handoff</div>
+          <div class="impact-desc">A unified design system that cut developer handoff time.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ EXPERIENCE — horizontally-scrolling ============================ -->
+  <section class="experience" id="experience-section">
+    <div class="village-intro">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Education &amp; Experience</span>
+          <h2 class="section-title">The road so far.</h2>
+        </div>
+        <p class="section-note">Scroll — the path unfolds left to right,
+          one waypoint at a time.</p>
+      </div>
+    </div>
+
+    <div class="exp-pin-space">
+      <div class="exp-viewport">
+        <div class="exp-plane" aria-hidden="true">
+          <canvas id="expPlaneCanvas"></canvas>
+        </div>
+
+        <!-- FIX #10b — shared SVG arrowhead marker (defined once, referenced by all arrows) -->
+        <svg width="0" height="0" style="position:absolute;overflow:hidden;" aria-hidden="true">
+          <defs>
+            <marker id="exp-arrowhead" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0 0 L6.5 3.5 L0 7 Z" fill="#C81034"/>
+            </marker>
+          </defs>
+        </svg>
+
+        <div class="exp-track">
+
+          <!-- FIX #10c — chronological order: 壱 Education -->
+          <div class="exp-card reveal">
+            <div class="exp-card-top">
+              <span class="kanji-num">壱</span>
+              <span class="exp-badge">Education</span>
+            </div>
+            <h3 class="exp-role">B.Tech, Computer Science Engineering</h3>
+            <div class="exp-meta">GITA Autonomous College · 2022 – 2026</div>
+            <ul class="exp-bullets">
+              <li>Focused coursework: Software Engineering, Human-Computer Interaction, Design Thinking</li>
+              <li>Foundation for a design practice grounded in structured, engineering-minded thinking</li>
+            </ul>
+          </div>
+
+          <!-- FIX #10b — curved dotted bezier arrow -->
+          <div class="exp-arrow" aria-hidden="true">
+            <svg viewBox="0 0 120 44" width="120" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 36 Q 32 2, 60 22 Q 88 42, 115 10"
+                stroke="#C81034" stroke-width="1.5" stroke-dasharray="3 6"
+                stroke-linecap="round" marker-end="url(#exp-arrowhead)"/>
+            </svg>
+          </div>
+
+          <!-- 弐 Gaurav Go Games (Jun 2023 – Aug 2024) -->
+          <div class="exp-card reveal">
+            <div class="exp-card-top">
+              <span class="kanji-num">弐</span>
+              <span class="exp-badge">Experience</span>
+            </div>
+            <h3 class="exp-role">UI/Visual Design Intern</h3>
+            <div class="exp-meta">Gaurav Go Games Tech Pvt. Ltd. · Jun 2023 – Aug 2024 · Bhubaneswar</div>
+            <ul class="exp-bullets">
+              <li>Designed 40+ in-game UI components — HUDs and menus — for "Sena," improving visual hierarchy for 1,000+ internal users</li>
+              <li>Helped implement a unified design system with a 6-person cross-functional team, cutting handoff time by 20%</li>
+              <li>Ran 10+ usability audits that resolved navigation bottlenecks, lifting task success by 25%</li>
+            </ul>
+          </div>
+
+          <div class="exp-arrow" aria-hidden="true">
+            <svg viewBox="0 0 120 44" width="120" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 10 Q 32 46, 60 22 Q 88 -2, 115 36"
+                stroke="#C81034" stroke-width="1.5" stroke-dasharray="3 6"
+                stroke-linecap="round" marker-end="url(#exp-arrowhead)"/>
+            </svg>
+          </div>
+
+          <!-- FIX #10c — 参 Cherry Glitz (Sept 2024 – Dec 2024), was 四 -->
+          <div class="exp-card reveal">
+            <div class="exp-card-top">
+              <span class="kanji-num">参</span>
+              <span class="exp-badge">Experience</span>
+            </div>
+            <h3 class="exp-role">Visual UI Designer</h3>
+            <div class="exp-meta">Cherry Glitz · Sept 2024 – Dec 2024 · Remote</div>
+            <ul class="exp-bullets">
+              <li>Revamped 20+ landing-page creatives with a conversion-centered approach — a 12% lift in CTR</li>
+              <li>Applied visual-hierarchy principles across 10+ CTA placements to streamline the acquisition funnel</li>
+            </ul>
+          </div>
+
+          <div class="exp-arrow" aria-hidden="true">
+            <svg viewBox="0 0 120 44" width="120" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 36 Q 32 2, 60 22 Q 88 42, 115 10"
+                stroke="#C81034" stroke-width="1.5" stroke-dasharray="3 6"
+                stroke-linecap="round" marker-end="url(#exp-arrowhead)"/>
+            </svg>
+          </div>
+
+          <!-- FIX #10c — 四 GYG (Oct 2025 – Dec 2025), was 参 -->
+          <div class="exp-card reveal">
+            <div class="exp-card-top">
+              <span class="kanji-num">四</span>
+              <span class="exp-badge">Experience</span>
+            </div>
+            <h3 class="exp-role">Graphic Designer</h3>
+            <div class="exp-meta">Get Your Guidance (GYG) · Oct 2025 – Dec 2025 · Remote</div>
+            <ul class="exp-bullets">
+              <li>Executed 30+ visual marketing campaigns, lifting social media reach by 22% through optimized layouts</li>
+              <li>Standardized visual guidelines and 15+ reusable templates, cutting turnaround time by 30%</li>
+            </ul>
+          </div>
+
+          <!-- Fix #10 — curved arrow before new 伍 card -->
+          <div class="exp-arrow" aria-hidden="true">
+            <svg viewBox="0 0 120 44" width="120" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 10 Q 32 46, 60 22 Q 88 -2, 115 36"
+                stroke="#C81034" stroke-width="1.5" stroke-dasharray="3 6"
+                stroke-linecap="round" marker-end="url(#exp-arrowhead)"/>
+            </svg>
+          </div>
+
+          <!-- Fix #10 — 伍 new card (5th, current role) -->
+          <!-- NOTE: exact start month is a placeholder — update when confirmed -->
+          <div class="exp-card reveal">
+            <div class="exp-card-top">
+              <span class="kanji-num">伍</span>
+              <span class="exp-badge">Experience</span>
+            </div>
+            <h3 class="exp-role">Product Designer Intern</h3>
+            <div class="exp-meta">CareerCrush Labs &amp; PMX IT Solutions · Aug 2026 – Sep 2026</div>
+            <ul class="exp-bullets">
+              <li>Contributing to product and platform design at CareerCrush Labs, exploring AI use cases, feature opportunities, and product thinking</li>
+              <li>Evaluating problem-solution fit — understanding genuine user problems and whether proposed solutions create real value</li>
+              <li>Learning pricing fundamentals and contributing to PMX IT Solutions' pricing strategy initiatives</li>
+              <li>Building structured product thinking around discovery, prioritisation, decision-making, execution, and iteration</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- FIX #10d — .village-skills tag cloud REMOVED -->
+  </section>
+
+  <div class="slash-divider"><svg viewBox="0 0 400 2"><path d="M0 1 L400 1"/></svg></div>
+
+  <!-- FIX #11 — #resume section REMOVED from index; lives at resume.html -->
+
+  <!-- ============================ CTA ============================ -->
+  <section class="cta-section">
+    <div class="cta-grid">
+      <div class="cta-copy reveal">
+        <h2 class="cta-heading">Ready for a<br><em class="accent">fresh</em> perspective?</h2>
+        <p class="cta-sub">Let's talk about your next product, dashboard,
+          or brand — and see where a little discipline and a sharp edge
+          can take it.</p>
+        <div class="cta-actions">
+          <a class="btn" href="resume.html">View Resume</a>
+          <span class="say-hello-wrap">
+            <a class="btn ghost" href="mailto:dmsahoo321@gmail.com">Say Hello</a>
+            <span class="say-hello-pop" aria-hidden="true">🥷 Hello there!</span>
+          </span>
+        </div>
+      </div>
+      <div class="cta-video-frame reveal">
+        <video src="assets/cta/kakkashi-cta.webm" autoplay muted loop playsinline></video>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span class="foot-note">© <span id="year"></span> Durgamadhaba Sahoo — designed &amp; built with discipline.</span>
+    <div class="footer-links">
+      <a href="mailto:dmsahoo321@gmail.com" class="footer-social">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        Email
+      </a>
+      <a href="https://www.linkedin.com/in/durgamadhaba-sahoo/" target="_blank" rel="noopener" class="footer-social">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3.5a1.96 1.96 0 100 3.92 1.96 1.96 0 000-3.92zM20.44 20h-3.37v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V20h-3.37V8.5h3.24v1.57h.05c.45-.85 1.55-1.75 3.19-1.75 3.41 0 4.04 2.25 4.04 5.17V20z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://behance.net/durgamsahoo" target="_blank" rel="noopener" class="footer-social">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7.8 10.8c1.02-.5 1.56-1.3 1.56-2.5 0-2.4-1.8-3.3-4-3.3H1v14h4.65c2.4 0 4.55-1.05 4.55-3.65 0-1.6-.8-2.9-2.4-3.55zM3.7 7.1h2.5c1 0 1.9.3 1.9 1.5 0 1.1-.75 1.6-1.85 1.6H3.7V7.1zm2.85 9.8H3.7v-3.6h2.95c1.25 0 2.15.55 2.15 1.8 0 1.3-1 1.8-2.25 1.8zM17.5 6.9h4.6V8.3h-4.6zM23 14.15c0-2.85-1.65-5-4.7-5-2.9 0-4.9 2.1-4.9 5.05 0 3.05 1.9 5 5 5 2.3 0 3.85-1.05 4.4-2.95h-2.35c-.25.7-1 1.1-2 1.1-1.4 0-2.25-.85-2.35-2.25h6.85c.03-.3.05-.6.05-.95zm-6.85-1.15c.15-1.15.9-1.85 2.1-1.85 1.15 0 1.95.75 2.05 1.85z"/></svg>
+        Behance
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/hero-char.js"></script>
+<script src="js/hi-cycle.js"></script>
+<script src="js/count-up.js"></script>
+<script src="js/protect-media.js"></script>
+<script src="js/sprite-loop.js"></script>
+<script src="js/main.js"></script>
+<script src="js/loader.js"></script>
+</body>
+</html>

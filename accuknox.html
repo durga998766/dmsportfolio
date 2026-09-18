@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AccuKnox — Durgamadhaba Sahoo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700;800&family=Sedgwick+Ave+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>#loader{--loader-color:#0C6980;}</style>
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+  <div class="curtain-strip"></div>
+</div>
+
+
+<div class="scroll-progress"></div>
+
+<nav class="pill-nav" id="pillNav">
+  <div class="pill-nav-inner">
+    <a href="index.html#home" class="pill-home-link">
+      <img src="assets/profile/avatar-sm.webp" alt="Durgamadhaba Sahoo" class="pill-avatar">
+      <span class="pill-name">DURGA</span>
+    </a>
+    <span class="pill-dots" aria-hidden="true">•••</span>
+    <span class="pill-links">
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="resume.html">Resume</a>
+    </span>
+  </div>
+</nav>
+
+<main>
+  <section class="detail-hero">
+    <div class="wrap">
+      <a class="back-link-float" href="index.html#projects">← Back to Portfolio</a>
+      <span class="eyebrow">Case Study 壱 / 04</span>
+      <h1 class="detail-title">AccuKnox — Asset Security Dashboard</h1>
+      <div class="detail-meta">
+        <div><div class="k">Role</div><div class="v">UX Designer Trainee (assessment)</div></div>
+        <div><div class="k">Platform</div><div class="v">Web dashboard</div></div>
+        <div><div class="k">Design System</div><div class="v">Midnight Frost</div></div>
+        <div><div class="k">Tools</div><div class="v">Figma</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fix 1: cover image + all case-study images stacked full-bleed, no headings between -->
+  <div class="detail-cover"><img src="assets/accuknox/1-hero.webp" alt="AccuKnox — Asset Security Dashboard cover" loading="eager"></div>
+  <div class="detail-shot"><img src="assets/accuknox/2-request.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/3-overview.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/4-challenge.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/5-strategy.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/6-competitor-analysis.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/7-persona.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/8-emapathy-map.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/9-design-starategy.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/10-information-architecture.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/11-design-system.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/12-low-fi-frames.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/13-hi-fi-frames.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/14-assest.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/15-findings.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/16-expected-impact.webp" alt="" loading="lazy"></div>
+  <div class="detail-shot"><img src="assets/accuknox/16-thanks-page.webp" alt="" loading="lazy"></div>
+
+  <div class="detail-next">
+    <a class="back-link" href="index.html#projects">← Back to Portfolio</a>
+    <a class="btn ghost" href="zurie.html">Next — Zurie →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span class="foot-note">© <span id="year"></span> Durgamadhaba Sahoo</span>
+    <div class="footer-links"><a href="mailto:dmsahoo321@gmail.com">Email</a><a href="#">LinkedIn</a><a href="https://behance.net/durgamsahoo" target="_blank" rel="noopener">Behance</a></div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/protect-media.js"></script>
+<script src="js/page-wipe.js"></script>
+</body>
+</html>
